@@ -1,0 +1,10 @@
+<%= @recipe.name %>
+<%= @recipe.servings %>
+<%= @recipe.preparation_time %>
+<%= @recipe.difficulty %>
+<%= @recipe.ingredients %>
+<%= @recipe.steps %>
+<%= @recipe.cuisines.first.name %>
+<%= @recipe.preferences.first.name %>
+<%= @recipe.food_types.first.name %>
+<img src="<%= @recipe.photo_file_name %>" title="<%= @recipe.photo_file_name %>" />

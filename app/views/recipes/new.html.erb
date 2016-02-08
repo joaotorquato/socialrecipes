@@ -1,0 +1,16 @@
+<div class="row">
+  <%= simple_form_for @recipe do |f| %>
+    <%= f.input :name %>
+    <%= f.input :servings %>
+    <%= f.input :preparation_time %>
+    <%= f.input :difficulty %>
+    <%= f.input :ingredients %>
+    <%= f.input :steps %>
+    <%= f.association :cuisines %>
+    <%= f.association :preferences %>
+    <%= f.association :food_types %>
+    <%= f.input :photo, as: :file %>
+
+    <%= f.submit "Criar Receita", class:"btn btn-primary" %>
+  <% end %>
+</div>

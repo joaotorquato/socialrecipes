@@ -1,0 +1,75 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/joao/Documents/Code/socialrecipes/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/joao/Documents/Code/socialrecipes/app/models/cuisine.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/joao/Documents/Code/socialrecipes/app/models/preference.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/joao/Documents/Code/socialrecipes/app/models/food_type.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/joao/Documents/Code/socialrecipes/app/models/recipe.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/joao/Documents/Code/socialrecipes/app/controllers/recipes_controller.rb": [
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/joao/Documents/Code/socialrecipes/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1454969717
+  }
+}
