@@ -15,7 +15,18 @@
         null,
         1,
         null,
+        null,
         1,
+        null,
+        1,
+        null
+      ],
+      "/home/joao/Documents/Code/socialrecipes/app/models/difficulty.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "/home/joao/Documents/Code/socialrecipes/app/models/cuisine.rb": [
@@ -36,6 +47,7 @@
       "/home/joao/Documents/Code/socialrecipes/app/controllers/recipes_controller.rb": [
         1,
         1,
+        2,
         2,
         null,
         null,
@@ -84,6 +96,6 @@
         null
       ]
     },
-    "timestamp": 1455228029
+    "timestamp": 1455231178
   }
 }

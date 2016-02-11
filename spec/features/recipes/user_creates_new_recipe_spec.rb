@@ -2,14 +2,14 @@ require 'rails_helper'
 
 feature 'User creates a new recipe' do
   scenario 'successfuly' do
-    recipe = create(:recipe)
+    recipe = build(:recipe)
 
     visit new_recipe_path
 
     fill_in 'recipe[name]', with: recipe.name
     fill_in 'recipe[servings]', with: recipe.servings
     fill_in 'recipe[preparation_time]', with: recipe.preparation_time
-    fill_in 'recipe[difficulty]', with: recipe.difficulty
+    select recipe.difficulty
     fill_in 'recipe[ingredients]', with: recipe.ingredients
     fill_in 'recipe[steps]', with: recipe.steps
     select recipe.preferences.first.name

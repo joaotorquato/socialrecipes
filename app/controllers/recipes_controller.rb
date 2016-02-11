@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
   def new
     @recipe = Recipe.new
+    @difficulty_types = Difficulty::TYPES
   end
 
   def create

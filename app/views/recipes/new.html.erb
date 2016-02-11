@@ -1,15 +1,15 @@
 <div class="row">
   <%= simple_form_for @recipe do |f| %>
-    <%= f.input :name %>
-    <%= f.input :servings %>
-    <%= f.input :preparation_time %>
-    <%= f.input :difficulty %>
-    <%= f.input :ingredients %>
-    <%= f.input :steps %>
-    <%= f.association :cuisines %>
-    <%= f.association :preferences %>
-    <%= f.association :food_types %>
-    <%= f.input :photo, as: :file %>
+    <%= f.input :name, label: "Nome da reiceita" %>
+    <%= f.input :servings, label: "Serve quantas pessoas?" %>
+    <%= f.input :preparation_time, label: "Tempo de preparo(em minuots)" %>
+    <%= f.input :difficulty, label: "Dificuldade do prato", collection: @difficulty_types, prompt: "Selecione um nível de dificuldade" %>
+    <%= f.input :ingredients, label: "Ingredientes" %>
+    <%= f.input :steps, label: "Passo-a-passo" %>
+    <%= f.association :cuisines, label:"Cozinha" %>
+    <%= f.association :preferences, label:"Preferência" %>
+    <%= f.association :food_types, label: "Tipo" %>
+    <%= f.input :photo, as: :file, label: "Foto" %>
 
     <%= f.submit "Criar Receita", class:"btn btn-primary" %>
   <% end %>

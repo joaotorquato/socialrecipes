@@ -3,12 +3,8 @@ FactoryGirl.define do
     sequence(:name) { |n| "Receita #{n}" }
     sequence(:servings) { |n| n }
     sequence(:preparation_time) { |n| 30 * n }
-    sequence(:difficulty) do |n|
-      if n.even?
-        "Fácil"
-      else
-        "Médio"
-      end
+    sequence(:difficulty) do |_n|
+      Difficulty::TYPES.sample
     end
     sequence(:ingredients) { |n| "Ingredientes da receita #{n}" }
     sequence(:steps) { |n| "Passo-a-passo da receita #{n}" }
