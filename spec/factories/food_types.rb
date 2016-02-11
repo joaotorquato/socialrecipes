@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :food_type do
-    name "Almoço"
+    sequence(:name) { |n| "Food Type #{n}" }
   end
 end

@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :preference do
-    name 'Ligth'
+    sequence(:name) { |n| "Preference #{n}" }
   end
 end

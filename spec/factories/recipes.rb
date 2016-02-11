@@ -1,12 +1,21 @@
 FactoryGirl.define do
   factory :recipe do
-    name "Almôndegas de carne com pimenta"
-    servings 4
-    preparation_time 90
-    difficulty "Médio"
-    ingredients "400g de carne moída, 1 colher de chpa de garam masala,
-                 azeite de oliva, 3 pimentôes vermelhos"
-    steps "Coloque 1 cancea de trigo bulgur,
-           2 canecas de água fervente, o limão em conversa, tampe e mexa"
+    sequence(:name) { |n| "Receita #{n}" }
+    sequence(:servings) { |n| n }
+    sequence(:preparation_time) { |n| 30 * n }
+    sequence(:difficulty) do |n|
+      if n.even?
+        "Fácil"
+      else
+        "Médio"
+      end
+    end
+    sequence(:ingredients) { |n| "Ingredientes da receita #{n}" }
+    sequence(:steps) { |n| "Passo-a-passo da receita #{n}" }
+    cuisines { [create(:cuisine)] }
+    preferences { [create(:preference)] }
+    food_types { [create(:food_type)] }
+    photo Rack::Test::UploadedFile.new(
+      Rails.root.join('spec', 'images', 'campus_code.png'), 'image/jpg')
   end
 end

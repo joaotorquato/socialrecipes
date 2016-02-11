@@ -1,10 +1,46 @@
-<%= @recipe.name %>
-<%= @recipe.servings %>
-<%= @recipe.preparation_time %>
-<%= @recipe.difficulty %>
-<%= @recipe.ingredients %>
-<%= @recipe.steps %>
-<%= @recipe.cuisines.first.name %>
-<%= @recipe.preferences.first.name %>
-<%= @recipe.food_types.first.name %>
-<img src="<%= @recipe.photo_file_name %>" title="<%= @recipe.photo_file_name %>" />
+<div class="row">
+  <div id="left-box" class="col-md-4">
+    <h4>Preferências</h4>
+    <ul class="list-unstyled">
+      <% @preferences.each do |preference| %>
+      <li><%= link_to preference.name, preference %></li>
+      <% end %>
+    </ul>
+    <h4>Tipo</h4>
+    <ul class="list-unstyled">
+      <% @food_types.each do |food_type| %>
+      <li><%= link_to food_type.name, food_type %></li>
+      <% end %>
+    </ul>
+    <h4>Cozinha</h4>
+    <ul class="list-unstyled">
+      <% @cuisines.each do |cuisine| %>
+      <li><%= link_to cuisine.name, cuisine %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div id="middle-box" class="col-md-4">
+    <h3><%= @recipe.name %></h3>
+    <ul class="list-unstyled">
+      <li>Preferência: <%= @recipe.preferences.first.name %></li>
+      <li>Tipo: <%= @recipe.food_types.first.name %></li>
+      <li>Cozinha: <%= @recipe.cuisines.first.name %></li>
+      <li>Serve: <%= @recipe.servings %> pessoas</li>
+      <li>Tempo de preparo: <%= @recipe.preparation_time %></li>
+      <li>Dificuldade: <%= @recipe.difficulty %></li>
+      <li>
+        <h4>Ingredientes:</h4>
+        <p>
+          <%= @recipe.ingredients %>
+        </p>
+      </li>
+    </ul>
+  </div>
+  <div id="right-box" class="col-md-4">
+    <%= image_tag(@recipe.photo.url, height: 250) %>
+    <h4>Preparo:</h4>
+    <p>
+      <%= @recipe.steps %>
+    </p>
+  </div>
+</div>
